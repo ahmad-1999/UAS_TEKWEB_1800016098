@@ -1,0 +1,28 @@
+<div class="container">
+    <button class="btn-tambah" mat-raised-button color="primary" (click)="tambahmenu()">Tambah Pesanan</button>
+    <mat-card>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item *ngFor="let item of dataHome">
+                    <img matListAvatar src="assets/home.jpg" alt="...">
+
+                    <p matLine>
+                        <span>Makanan : {{item.makanan}} </span>
+                    </p>
+                    <p matLine>
+                        <span>Minuman : {{item.minuman}} </span>
+                    </p>
+                    <p matLine>
+                        <span>Topping : {{item.topping}} </span>
+                    </p>
+                    <p matLine>
+                        <span>Meja Nomor : {{item.mejanomor}}</span>
+                    </p>
+                    <button class="btn-edit" mat-raised-button color="accent" (click)="editHome(item)">Ubah</button>
+                    <button class="btn-selesai" mat-raised-button color="warn"
+                        (click)="hapusHome(item.id)">Hapus</button>
+                </mat-list-item>
+            </mat-list>
+        </mat-card-content>
+    </mat-card>
+</div>
